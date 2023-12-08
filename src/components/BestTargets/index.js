@@ -23,7 +23,7 @@ export const BestTargets = ({ opponents, hitsMade, factionMembers }) => {
     .orderBy("respect_gain", "desc")
     .groupBy("attacker_name")
     .value();
-  const membersNames = Object.keys(hitMadeGroupByName);
+  const membersNames = Object.keys(factionMembers);
   useEffect(() => {
     console.log("hitMadeGroupByName", hitMadeGroupByName);
   }, []);
@@ -69,7 +69,7 @@ export const BestTargets = ({ opponents, hitsMade, factionMembers }) => {
               <tr>
                 <td>{item}</td>
                 <td>
-                  {hitMadeGroupByName[item].map((hitItem, index) => {
+                  {(hitMadeGroupByName[item] || []).map((hitItem, index) => {
                     return (
                       <div
                         className={
@@ -83,7 +83,7 @@ export const BestTargets = ({ opponents, hitsMade, factionMembers }) => {
                   })}
                 </td>
                 <td>
-                  {bestTargetsByStats[item].weakerOpponents.map(
+                  {(bestTargetsByStats[item].weakerOpponents || []).map(
                     (target, index) => {
                       return (
                         <div className={index < 3 ? "best-target" : ""}>
