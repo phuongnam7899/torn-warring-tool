@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+td.good {
+    background-color: rgb(210, 255, 210);
+}
+td.bad {
+    background-color: rgb(255, 155, 153);
+}
+
+
+th {
+    background-color: #f2f2f2;
+}
