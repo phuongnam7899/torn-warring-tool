@@ -29,9 +29,9 @@ const colorList = [
 const convertToTornTime = (time, tz) => {
   if (tz < 0) {
     // console.log(' time.add(tz, "hour").unix()', time.add(tz, "hour").unix());
-    return time.add(tz, "hour");
+    return time.add(Math.abs(tz), "hour");
   } else if (tz > 0) {
-    return time.subtract(tz, "hour");
+    return time.subtract(Math.abs(tz), "hour");
   } else {
     return time.unix();
   }

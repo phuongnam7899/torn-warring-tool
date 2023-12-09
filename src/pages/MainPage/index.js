@@ -7,14 +7,18 @@ import dayjs from "dayjs";
 import { BestTargets } from "../../components/BestTargets";
 
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
-const availableFactions = ["Nova Gypsy Jokers", "Shaggy Hi-Fidelity"];
+const availableFactions = [
+  "Nova Gypsy Jokers",
+  "Shaggy Hi-Fidelity",
+  "Undecided Haven",
+];
 
 const convertToTimezone = (time, tz) => {
   if (tz > 0) {
     // console.log(' time.add(tz, "hour").unix()', time.add(tz, "hour").unix());
-    return time.add(tz, "hour").unix();
+    return time.add(Math.abs(tz), "hour").unix();
   } else if (tz < 0) {
-    return time.subtract(tz, "hour").unix();
+    return time.subtract(Math.abs(tz), "hour").unix();
   } else {
     return time.unix();
   }
