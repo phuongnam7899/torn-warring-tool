@@ -12,6 +12,7 @@ const availableFactions = [
   "Shaggy Hi-Fidelity",
   "Undecided Haven",
   "Seshlehem",
+  "Dark Carnival",
 ];
 const goldenCustomers = [
   "Nova Gypsy Jokers",

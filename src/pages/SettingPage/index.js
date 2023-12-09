@@ -47,6 +47,10 @@ export const SettingPage = () => {
     <div>
       {" "}
       <h1>General Information</h1>
+      <p>
+        Please <b>make sure there's not any redundant spaces</b> after the
+        faction name
+      </p>
       <div
         style={{
           display: "flex",
@@ -128,7 +132,10 @@ export const SettingPage = () => {
       <p>
         Only <b>Limited Access</b> API key is required
       </p>
-      <p>Make sure you input correct API keys</p>
+      <p>
+        Make sure you <b>input correct API keys</b> and there's{" "}
+        <b>no redundant spaces</b> after member's name or API keys
+      </p>
       <p>
         The more members you add, the more accurate the report will be
         (Especially the stats estimation an the attacks time)
