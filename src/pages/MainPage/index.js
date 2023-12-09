@@ -11,6 +11,13 @@ const availableFactions = [
   "Nova Gypsy Jokers",
   "Shaggy Hi-Fidelity",
   "Undecided Haven",
+  "Seshlehem",
+];
+const goldenCustomers = [
+  "Nova Gypsy Jokers",
+  "Shaggy Hi-Fidelity",
+  "Undecided Haven",
+  "Seshlehem",
 ];
 
 const convertToTimezone = (time, tz) => {
@@ -119,6 +126,15 @@ export const MainPage = () => {
         for more information
       </div>
     );
+
+  if (goldenCustomers.includes(opponentFactionName)) {
+    return (
+      <div>
+        Your opponent faction is my special customer, tool cannot be used with
+        them
+      </div>
+    );
+  }
 
   return (
     <>
