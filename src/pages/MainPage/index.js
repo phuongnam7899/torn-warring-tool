@@ -6,6 +6,8 @@ import { useLocalStorage } from "@uidotdev/usehooks";
 import dayjs from "dayjs";
 import { BestTargets } from "../../components/BestTargets";
 
+// 17 14
+
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
 const availableFactions = [
   "Nova Gypsy Jokers",

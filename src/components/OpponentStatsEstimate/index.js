@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import _ from "lodash";
+import { NumberFormat } from "../../App";
 
 export const OpponentStatsEstimate = ({
   attacks,
@@ -156,9 +157,9 @@ export const OpponentStatsEstimate = ({
                 <td>
                   {item.energyUsed + (isElite ? eliteEnergyUsedBonus : 0)}
                 </td>
-                <td>{Math.round(item.min)}</td>
-                <td>{Math.round(item.max)}</td>
-                <td>{Math.round(item.average)}</td>
+                <td>{NumberFormat(Math.round(item.min))}</td>
+                <td>{NumberFormat(Math.round(item.max))}</td>
+                <td>{NumberFormat(Math.round(item.average))}</td>
               </tr>
             );
           })}

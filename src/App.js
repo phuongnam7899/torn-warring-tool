@@ -5,6 +5,9 @@ import { MainPage } from "./pages/MainPage";
 import { Navbar } from "./components/Navbar";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { SecretPage } from "./pages/SecretPage";
+
+export const NumberFormat = new Intl.NumberFormat();
 
 function App() {
   return (
@@ -15,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/setting" exact element={<SettingPage />} />
+            <Route path="/secret" exact element={<SecretPage />} />
           </Routes>
         </div>
       </LocalizationProvider>
