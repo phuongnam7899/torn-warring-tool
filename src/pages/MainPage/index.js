@@ -15,7 +15,9 @@ const availableFactions = [
   "Undecided Haven",
   "Seshlehem",
   "Dark Carnival",
-];
+].map((item) => {
+  return item.toLocaleLowerCase();
+});
 const goldenCustomers = [
   "Nova Gypsy Jokers",
   "Shaggy Hi-Fidelity",
@@ -95,7 +97,8 @@ export const MainPage = () => {
       factionMembers === "{}"
     )
       window.location = "/setting";
-    availableFactions.includes(yourFactionName) && fetchAttacks();
+    availableFactions.includes(yourFactionName.toLocaleLowerCase().trim()) &&
+      fetchAttacks();
   }, []);
   const attacksFromOpponents = attacks.filter((item) => {
     return (
@@ -115,7 +118,7 @@ export const MainPage = () => {
     );
   });
 
-  if (!availableFactions.includes(yourFactionName))
+  if (!availableFactions.includes(yourFactionName.toLocaleLowerCase().trim()))
     return (
       <div>
         Your faction hasn't been allowed to access the tool yet, contact{" "}
@@ -161,7 +164,10 @@ export const MainPage = () => {
       ) : (
         <>
           Please wait {Object.keys(factionMemberObject).length * 2} seconds
-          because Torn limit the API calls per minute (Do not close this tab)
+          because Torn limit the API calls per minute (Do not close this tab).
+          If it takes too longer than{" "}
+          {Object.keys(factionMemberObject).length * 2} seconds, please recheck
+          your setting, then contact me for support
         </>
       )}
     </>

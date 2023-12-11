@@ -157,9 +157,9 @@ export const OpponentStatsEstimate = ({
                 <td>
                   {item.energyUsed + (isElite ? eliteEnergyUsedBonus : 0)}
                 </td>
-                <td>{NumberFormat(Math.round(item.min))}</td>
-                <td>{NumberFormat(Math.round(item.max))}</td>
-                <td>{NumberFormat(Math.round(item.average))}</td>
+                <td>{NumberFormat.format(Math.round(item.min))}</td>
+                <td>{NumberFormat.format(Math.round(item.max))}</td>
+                <td>{NumberFormat.format(Math.round(item.average))}</td>
               </tr>
             );
           })}
