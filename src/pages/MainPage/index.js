@@ -15,6 +15,7 @@ const availableFactions = [
   "Undecided Haven",
   "Seshlehem",
   "Dark Carnival",
+  "The Aristocrats",
 ].map((item) => {
   return item.toLocaleLowerCase();
 });
