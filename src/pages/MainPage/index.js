@@ -16,6 +16,7 @@ const availableFactions = [
   "Seshlehem",
   "Dark Carnival",
   "The Aristocrats",
+  "WARTORN",
 ].map((item) => {
   return item.toLocaleLowerCase();
 });

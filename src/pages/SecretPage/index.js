@@ -61,6 +61,13 @@ export const SecretPage = () => {
     setLastUpdated(dayjs().format("HH:mm"));
     setUsersData(fetchedUsers);
   };
+  // const fetchExpense = async () => {
+  //   const response = await fetch(
+  //     `https://api.torn.com/user/?selections=log&key=${accounts[0].apiKey}`
+  //   );
+  //   const data = await response.json();
+  //   console.log("data", data);
+  // };
   useEffect(() => {
     fetchData();
     const interval = setInterval(() => {
@@ -149,6 +156,17 @@ export const SecretPage = () => {
           );
         })}
       </div>
+      {/* <div>
+        Income vs Expense
+        <button
+          type="button"
+          onClick={() => {
+            fetchExpense();
+          }}
+        >
+          Fetch
+        </button>
+      </div> */}
     </div>
   );
 };
