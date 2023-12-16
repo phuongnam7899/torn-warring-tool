@@ -126,7 +126,7 @@ export const MainPage = () => {
         Your faction hasn't been allowed to access the tool yet, contact{" "}
         <a
           style={{ color: "blue" }}
-          href="https://www.torn.com/profiles.php?XID=3077555"
+          href="https://www.torn.com/profiles.php?XID=3170552"
           target="_blank"
         >
           nklm
